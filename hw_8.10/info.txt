@@ -1,0 +1,1 @@
+Home work - connect to the linux via ssh.
