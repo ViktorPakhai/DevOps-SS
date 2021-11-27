@@ -1,0 +1,83 @@
+R1 configuratiion commands:
+
+en
+conf t
+show ip int bries
+int g0/0/0
+ap add 192.168.1.126 255.255.255.128
+no shut
+exit
+
+
+int s0/1/0
+ap add 192.168.1.249 255.255.255.252
+no shut
+exit
+
+copy run start
+
+
+------------------------------------------------------
+
+SW1 configuration
+
+en
+conf t
+host SW1
+int vlan 1
+ip add 192.168.1.125 255.255.255.128
+
+ip default-getaway 192.168.1.126
+
+
+-------------------
+Server 1 DHCP
+
+192.168.1.124 255.255.255.128
+
+-----------------------
+Internet Router
+
+int s0/1/0
+ap add 192.168.1.250 255.255.255.252
+
+int s0/1/1
+ap add 192.168.1.254 255.255.255.252
+no shut
+
+exit
+
+
+-------------------------------------------------
+
+R2 configuratiion commands:
+
+en
+conf t
+show ip int bries
+int g0/0/0
+ap add 192.168.1.190 255.255.255.192
+no shut
+exit
+
+int s0/1/0
+ap add 192.168.1.253 255.255.255.252
+no shut
+exit
+
+copy run start
+
+------------------------------------------------------
+SW1 configuration
+
+en
+conf t
+host SW1
+int vlan 1
+ip add 192.168.1.189 255.255.255.192
+
+ip default-getaway 192.168.1.190
+
+-------------------
+Server 2 DHCP
+192.168.1.188 255.255.255.192
