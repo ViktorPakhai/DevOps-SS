@@ -1,0 +1,80 @@
+Scenario:
+PC1 pings PC2. Answer the following questions based on the echo request message sent from PC1 to PC2.
+
+1) What is the destination MAC address in the frame at A in the network?
+    e) Router1's G0/0/0 MAC address
+    Your Answer: e
+
+
+2) What is the destination MAC address at A in the network?
+
+   Your Answer: : 0010.AAAA.AAAA
+
+
+3) What encapsulation is used at A in the network?
+
+   Your Answer: EthernetII encapsulation
+
+
+4) What is the destination MAC address in the frame at B in the network?
+
+  e) Router1's G0/0/0 MAC address
+  
+   Your Answer: e
+
+
+5) What is the destination MAC address at B in the network? 
+
+
+   Your Answer: 0010.AAAA.AAAA
+
+
+6) What is the destination MAC address in the frame at C in the network?
+ 
+  k) There is no MAC address   
+
+7) What encapsulation is used at C in the network?
+
+
+   Your Answer: HDLC
+
+
+8) What is the destination MAC address in the frame at D in the network?
+  
+  b) PC2's MAC address
+  
+   Your Answer: b
+
+
+9) What is the destination MAC address at D in the network?
+
+
+   Your Answer: 0010.2222.2222
+
+
+10) What encapsulation is used at D in the network?
+
+   Your Answer: EthernetII encapsulation
+
+
+
+11) What is the destination MAC address in the frame at E in the network?
+ 
+  b) PC2's MAC address
+  
+
+   Your Answer: b
+
+
+12) What is the destination MAC address at E in the network?
+
+
+   Your Answer: 0010.2222.2222
+
+
+13) What encapsulation is used at E in the network?
+
+   Your Answer:  EthernetII encapsulation
+
+
+
