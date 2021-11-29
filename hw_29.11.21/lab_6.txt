@@ -1,0 +1,48 @@
+Site_1
+
+192.168.1.64/28
+Netmask	255.255.255.240
+Hostmin	192.168.1.65	
+Hostmax	192.168.1.78	
+Broadcast	192.168.1.79
+
+
+Site_2
+
+192.168.1.80/28
+Netmask	255.255.255.240
+Network	192.168.1.80	
+Hostmin	192.168.1.81	
+Hostmax	192.168.1.94
+Broadcast	192.168.1.95	
+
+
+Site_3
+
+192.168.1.96/28
+Netmask	255.255.255.240	
+Network	192.168.1.96		
+Hostmin	192.168.1.97	
+Hostmax	192.168.1.110	
+Broadcast	192.168.1.111
+
+
+Router with /30 mask (255.255.255.252 )
+
+R1
+Network: 192.168.1.112/30  
+Hostmin	192.168.1.113	
+Hostmax	192.168.1.114
+
+
+R2
+Network: 192.168.1.116/30  
+Hostmin	192.168.1.117	
+Hostmax	192.168.1.118
+
+
+R3
+Network: 192.168.1.120/30  
+Hostmin	192.168.1.121	
+Hostmax	192.168.1.122
+
