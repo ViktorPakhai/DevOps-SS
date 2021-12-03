@@ -1,0 +1,11 @@
+1. ARP brodcast packet
+2. All PC who connected to HUB.(PC2, PC3,PC4)
+3. PC2, PC3, PC1
+4. PC2, PC3, PC4
+5. ARP broadcast
+6. PC6, PC7, PC8
+7. PC5
+8. PC8
+9.  Single broadcast in Network1
+10. 1 broadcast domain
+11.  Network1 = single collisio domain
