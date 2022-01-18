@@ -1,0 +1,67 @@
+
+----------------- R1 ----------------------------------
+hostname R1
+int g0/0/0
+ip address dhcp
+no shut
+
+----------------- R3 ----------------------------------
+hostname R3
+int g0/0/0
+ip address dhcp
+no shut
+
+
+
+
+----------------- R17 ----------------------------------
+ip address 8.8.222.254 255.255.255.0
+no shut
+
+int loopback 0
+ip address 10.10.10.17 255.255.255.252
+
+R17(config)#ip dhcp excluded-address 8.8.222.254
+R17(config)#ip dhcp pool R17-DHCP-POOL
+R17(dhcp-config)#network 8.8.222.0 255.255.255.0
+R17(dhcp-config)#default-router 8.8.222.254
+R17(dhcp-config)#dns-server 8.8.8.8
+R17(dhcp-config)#exit
+
+R17(config)#int g0/0/0
+ip address 172.25.0.2 255.255.255.252
+
+router bgp 222
+bgp router-id 17.17.17.17
+neighbor 172.25.0.1 remote-as 111
+network 8.8.222.0 mask 255.255.255.0
+network 10.10.10.17 255.255.255.0
+
+-------------- R18 -------------------------------------
+hostname R18
+
+R18(config)#int g0/0/0
+ip address 172.25.0.1 255.255.255.252
+no shut
+
+int loopback 0
+ip address 10.10.10.18 mask 255.255.255.0
+
+R18(config)#int g0/0/1
+R18(config)#ip address 8.8.111.254 255.255.255.0
+R18(config)# no shut
+
+R18(config)#ip dhcp excluded-address 8.8.111.254
+R18(config)#ip dhcp pool R18-DHCP-POOL
+R18(dhcp-config)#network 8.8.111.0 255.255.255.0
+R18(dhcp-config)#default-router 8.8.111.254
+R18(dhcp-config)#dns-server 8.8.8.8
+R18(dhcp-config)#exit
+
+
+
+router bgp 111
+neighbor 172.25.0.2 remote-as 222
+bgp router-id 18.18.18.18
+network 8.8.111.0 mask 255.255.255.0
+network 10.10.10.17 255.255.255.0
